@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Post Manager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Blog Manager</h1>
+    <p>Write. Edit. Share your thoughts.</p>
+  </header>
+
+  <main>
+    <aside id="post-list">
+      <h2>Posts</h2>
+      <!-- Blog titles will appear here -->
+    </aside>
+
+    <section id="post-detail">
+      <h2>Select a post</h2>
+    </section>
+  </main>
+
+  <section id="forms">
+    <article>
+      <h3>Add New Post</h3>
+      <form id="new-post-form">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required />
+
+        <label for="content">Content:</label>
+        <textarea name="content" required></textarea>
+
+        <label for="author">Author:</label>
+        <input type="text" name="author" required />
+
+        <label for="image">Image URL:</label>
+        <input type="text" name="image" placeholder="Image URL" required />
+
+        <button type="submit">Add Post</button>
+      </form>
+    </article>
+
+    <article>
+      <h3>Edit Post</h3>
+      <form id="edit-post-form" class="hidden">
+        <label for="edit-title">Title:</label>
+        <input type="text" id="edit-title" name="title" />
+
+        <label for="edit-content">Content:</label>
+        <textarea id="edit-content" name="content" rows="5"></textarea>
+
+        <label for="edit-image">Image URL:</label>
+        <input type="text" id="edit-image" name="image" />
+
+        <button type="submit">Update Post</button>
+        <button type="button" id="cancel-edit">Cancel</button>
+      </form>
+    </article>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Blog Manager. Built for learning and sharing.</p>
+  </footer>
+
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>
